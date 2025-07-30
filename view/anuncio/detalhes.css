@@ -38,7 +38,6 @@ main {
   border-radius: 8px;
 }
 
-/* Garante que a imagem sempre se encaixe sem deformar e sem ultrapassar */
 .container-imagem img {
   max-width: 100%;
   max-height: 100%;
