@@ -1,22 +1,22 @@
-body,
-main {
-  box-sizing: border-box;
+html, body {
   margin: 0;
-  flex: 1;
+  padding: 0;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-
+  box-sizing: border-box;
 }
 
 main {
+  flex: 1;
   padding-top: 5vh;
   padding-bottom: 5vh;
-  height: 100vh;
   width: 100%;
   background-color: #e4eaf8;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
@@ -77,6 +77,7 @@ select {
   background-color: #B6CAF8;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
   overflow: hidden;
   transition: transform 0.3s ease;
   box-sizing: border-box;
@@ -99,12 +100,20 @@ select {
   margin: 1rem 0 0.5rem 0;
 }
 
+.img-container {
+  width: 90%;
+  height: 12rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .imagem-carro-card {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  height: 100%;
+  object-fit:cover;
+  border-radius: 12px;
 }
 
 .aditional-info-card {
@@ -124,6 +133,10 @@ select {
   margin-top: 0.5rem;
 }
 
+.modelo-carro-card {
+  color:  #0A2463;
+}
+
 footer {
   background-color: #0A2463;
   color: #eee;
@@ -131,4 +144,29 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.btn-login {
+  display: inline-block;
+  background-color: #0A2463;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: 2px solid #0041a8;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-login:hover {
+  background-color: #0041a8;
+  transform: translateY(-2px);
+}
+
+.btn-login:active {
+  background-color: #002f7a;
+  transform: translateY(0);
 }
