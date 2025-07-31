@@ -1,5 +1,5 @@
-body{
-  height: 100vh;
+body {
+    height: 100vh;
 }
 
 
@@ -19,15 +19,22 @@ body{
 }
 
 .funcionalidade button {
-    background-color: #0A2463;
-    padding: 10px;
-    border-radius: 10px;
-    border-width: 1px;
     cursor: pointer;
-    font-weight: bold;
-    color: white;
+    display: inline-block;
+    background-color: #0A2463;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #0041a8;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .funcionalidade button:hover {
-    background-color: #204eb8;
+    background-color: #0041a8;
+    transform: translateY(-2px);
 }
