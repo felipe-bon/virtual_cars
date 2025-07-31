@@ -1,0 +1,40 @@
+body {
+    height: 100vh;
+}
+
+
+.funcionalidades {
+    width: 70%;
+    border: 1px solid gray;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.funcionalidade {
+    min-width: 100px;
+    padding: 10px;
+}
+
+.funcionalidade button {
+    cursor: pointer;
+    display: inline-block;
+    background-color: #0A2463;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #0041a8;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.funcionalidade button:hover {
+    background-color: #0041a8;
+    transform: translateY(-2px);
+}
