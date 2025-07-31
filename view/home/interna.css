@@ -1,0 +1,33 @@
+body{
+  height: 100vh;
+}
+
+
+.funcionalidades {
+    width: 70%;
+    border: 1px solid gray;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.funcionalidade {
+    min-width: 100px;
+    padding: 10px;
+}
+
+.funcionalidade button {
+    background-color: #0A2463;
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 1px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+.funcionalidade button:hover {
+    background-color: blue;
+}

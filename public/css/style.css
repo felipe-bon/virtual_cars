@@ -42,8 +42,9 @@ nav {
   height: 5rem;
 }
 
-.btn-login {
+.btn-login, .logout-button {
   margin-right: 2rem;
+  cursor: pointer;
 }
 
 .selectors {
