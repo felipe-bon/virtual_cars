@@ -13,10 +13,17 @@
 
 <body>
     <header>
-        <nav class="nav-login">
+        <nav>
+            <a href="../home/homeInterna.html">
+                <button class="btn-login"> Voltar </button>
+            </a>
             <a href="../home/index.html">
                 <img class="logo-image-nav" src="../../public/images/icon.png" alt="logo">
             </a>
+
+            <div>
+
+            </div>
         </nav>
     </header>
 
@@ -24,28 +31,28 @@
         <div class="form-container">
             <h1 class="form-title">Cadastro de Anunciante</h1>
             <form class="cadastro-form" action="processa_cadastro.php" method="POST">
-                <label for="marca">Marca</label>
-                <input type="text" id="marca" name="marca">
+                <label for="marca" class="obrigatorio">Marca</label>
+                <input type="text" id="marca" name="marca" required>
 
-                <label for="modelo">Modelo</label>
-                <input type="text" id="modelo" name="modelo">
+                <label for="modelo" class="obrigatorio">Modelo</label>
+                <input type="text" id="modelo" name="modelo" required>
 
-                <label for="ano">Ano de Fabricação</label>
-                <input type="text" id="ano" name="ano">
+                <label for="ano" class="obrigatorio">Ano de Fabricação</label>
+                <input type="number" id="ano" name="ano" min="1900" max="2099" required>
 
-                <label for="cor">Cor</label>
-                <input type="text" id="cor" name="cor">
+                <label for="cor" class="obrigatorio">Cor</label>
+                <input type="text" id="cor" name="cor" required>
 
-                <label for="quilometragem">Quilometragem (Km)</label>
-                <input type="text" id="quilometragem" name="quilometragem" placeholder="Ex: 1.500 ou 1500,5" pattern="^\d{1,3}(?:[.,]?\d{3})*(?:[.,]\d{1})?$">
+                <label for="quilometragem" class="obrigatorio">Quilometragem (Km)</label>
+                <input type="number" id="quilometragem" name="quilometragem" required>
 
                 <label for="descricao">Descrição</label>
                 <textarea id="descricao" name="descricao" rows="4" placeholder="Deixe sua descrição.."></textarea>
 
-                <label for="valor">Valor</label>
-                <input type="text" id="valor" name="valor" pattern="^\d{1,3}(?:[.,]?\d{3})*(?:[.,]\d{2})?$" placeholder="Ex: 1.234,56 ou 1234.56">
+                <label for="valor" class="obrigatorio">Valor</label>
+                <input type="number" id="valor" name="valor" step="0.01" required>
 
-                <label for="estado">Estado</label>
+                <label for="estado" class="obrigatorio">Estado</label>
                 <select id="estado" name="estado" required>
                     <option value="">Selecione</option>
                     <option value="AC">AC</option>
@@ -77,8 +84,11 @@
                     <option value="TO">TO</option>
                 </select>
 
-                <label for="cidade">Cidade</label>
-                <input type="text" id="cidade" name="cidade">
+                <label for="cidade" class="obrigatorio">Cidade</label>
+                <input type="text" id="cidade" name="cidade" required>
+
+                <label for="fotos" class="obrigatorio">Fotos do veículo (mínimo 3):</label>
+                <input type="file" id="fotos" name="fotos[]" accept="image/*" multiple required>
 
                 <button type="submit" class="form-button">Criar</button>
             </form>

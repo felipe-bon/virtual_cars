@@ -2,22 +2,45 @@ body {
     height: 100vh;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .funcionalidades {
-    width: 70%;
-    border: 1px solid gray;
-    border-radius: 10px;
-
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 80%;
+    margin: 0 auto;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.funcionalidades h1 {
+  font-size: 1.8rem;
+  color: #0A2463;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .funcionalidade {
-    min-width: 100px;
+    max-width: 200px;
     padding: 10px;
+    width: 100%;
+    margin: 0 auto;
 }
 
+.funcionalidade a {
+    display: flex; 
+    width: 100%;
+    text-decoration: none;
+}
 .funcionalidade button {
     cursor: pointer;
     display: inline-block;
@@ -32,6 +55,9 @@ body {
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+     width: 100%;
+    flex-grow: 1;
 }
 
 .funcionalidade button:hover {

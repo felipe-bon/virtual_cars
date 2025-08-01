@@ -71,3 +71,17 @@ body{
   color: #0041a8;
   text-decoration: underline;
 }
+
+input:user-invalid {
+  border-color: red;
+}
+
+input:valid {
+  border-color: green;
+}
+
+label.obrigatorio::after {
+    content: ' *'; 
+    color: red;
+    font-weight: bold;
+}
