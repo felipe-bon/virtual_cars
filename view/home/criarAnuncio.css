@@ -2,6 +2,12 @@ body {
     min-height: 100vh;
 }
 
+nav {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
 main {
     height: auto; 
     flex: 1;
