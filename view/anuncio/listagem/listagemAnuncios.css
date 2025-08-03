@@ -1,3 +1,9 @@
+nav {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
 .listagem-container {
     width: 90%; 
     max-width: 900px;

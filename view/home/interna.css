@@ -8,6 +8,17 @@ main {
     justify-content: center;
 }
 
+nav {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+nav .btn-login {
+    position: absolute;
+    right: 2rem;
+}
+
 .funcionalidades {
     background-color: #ffffff;
     padding: 2rem;
@@ -23,10 +34,10 @@ main {
 }
 
 .funcionalidades h1 {
-  font-size: 1.8rem;
-  color: #0A2463;
-  margin-bottom: 1.5rem;
-  text-align: center;
+    font-size: 1.8rem;
+    color: #0A2463;
+    margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .funcionalidade {
@@ -37,11 +48,11 @@ main {
 }
 
 .funcionalidade a {
-    display: flex; 
+    display: flex;
     width: 100%;
     text-decoration: none;
 }
-.funcionalidade button {
+.funcionalidade .botao {
     cursor: pointer;
     display: inline-block;
     background-color: #0A2463;
@@ -56,11 +67,11 @@ main {
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 
-     width: 100%;
+    width: 100%;
     flex-grow: 1;
 }
 
-.funcionalidade button:hover {
+.funcionalidade .botao:hover {
     background-color: #0041a8;
     transform: translateY(-2px);
 }

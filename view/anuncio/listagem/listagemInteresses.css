@@ -1,3 +1,9 @@
+nav {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
 .interesses-container {
     width: 80%;
     max-width: 800px;
