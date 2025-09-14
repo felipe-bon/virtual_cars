@@ -24,7 +24,7 @@
   <main>
     <div class="form-container">
       <h1 class="form-title">Cadastro de Anunciante</h1>
-      <form class="cadastro-form" action="processa_cadastro.php" method="POST">
+      <form id="cadastroForm" class="cadastro-form" action="../../controller/anunciante-controller.php" method="POST">
         <label for="nome" class="obrigatorio">Nome</label>
         <input type="text" id="nome" name="nome" required>
 
@@ -43,6 +43,7 @@
         <button type="submit" class="form-button">Cadastrar</button>
         <p class="form-link">ou <a href="login.html">faça login</a></p>
       </form>
+      <div id="mensagem"></div>
     </div>
   </main>
 

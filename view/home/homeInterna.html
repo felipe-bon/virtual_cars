@@ -17,7 +17,7 @@
                 <img class="logo-image-nav" src="../../public/images/icon.png" alt="logo">
             </a>
 
-            <button class="btn-login">
+            <button class="btn-login" onclick="logout()" id="btn-logout" type="button" name="action" value="logout" action="../../controller/anunciante-controller.php" method="POST">
                 Logout
             </button>
         </nav>
@@ -45,6 +45,13 @@
     <footer>
         <h3>Vitual Cars não é um site real</h3>
     </footer>
+    <script>
+        function logout() {
+            const btnLogout = document.getElementById('btn-logout');
+            btnLogout.click();
+            window.location.href = "../view/user/login.html";
+        }
+    </script>
 </body>
 
 </html>
