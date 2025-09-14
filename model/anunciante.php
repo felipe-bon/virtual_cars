@@ -26,7 +26,7 @@ class Anunciante {
     {
       $sql = <<<SQL
         SELECT senhaHash
-        FROM cliente
+        FROM Anunciante
         WHERE email = ?
         SQL;
     
