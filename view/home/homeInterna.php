@@ -1,3 +1,14 @@
+<?php
+//TO DO:
+session_start();
+//TO DO: referencia correta?
+if (!isset($_SESSION['user_id'])) {
+    header('Location: ../user/login.html');
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -17,9 +28,9 @@
                 <img class="logo-image-nav" src="../../public/images/icon.png" alt="logo">
             </a>
 
-            <button class="btn-login">
+            <a href="../../controller/logout.php" class="btn-login">
                 Logout
-            </button>
+            </a>
         </nav>
     </header>
     <main>
