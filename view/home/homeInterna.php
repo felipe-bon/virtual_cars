@@ -52,13 +52,6 @@ if (!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']) {
     <footer>
         <h3>Vitual Cars não é um site real</h3>
     </footer>
-    <script>
-        function logout() {
-            const btnLogout = document.getElementById('btn-logout');
-            btnLogout.click();
-            window.location.href = "../view/user/login.html";
-        }
-    </script>
 </body>
 
 </html>
