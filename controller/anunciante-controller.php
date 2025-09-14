@@ -25,7 +25,7 @@ function cadastroAnunciante($pdo) {
         $_SESSION['loggedIn'] = true;
         $_SESSION['user'] = $email;
         $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-        header("Location: ../view/home/homeInterna.html");
+        header("Location: ../view/home/homeInterna.php");
         exit();
     } else {
         header("Location: ../view/user/cadastro.html");
@@ -45,7 +45,7 @@ function loginAnunciante($pdo) {
         $_SESSION['loggedIn'] = true;
         $_SESSION['user'] = $email;
         $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
-        header("Location: ../view/home/homeInterna.html");
+        header("Location: ../view/home/homeInterna.php");
         exit();
     }else {
         header("Location: ../view/user/cadastro.html");
