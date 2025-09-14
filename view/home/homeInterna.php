@@ -1,14 +1,10 @@
 <?php
-//TO DO:
 session_start();
-//TO DO: referencia correta?
-if (!isset($_SESSION['user_id'])) {
+if (!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']) {
     header('Location: ../user/login.html');
     exit();
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
