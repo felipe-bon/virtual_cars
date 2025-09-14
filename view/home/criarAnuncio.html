@@ -15,7 +15,7 @@
     <header>
         <nav>
             <a href="../home/homeInterna.html" class="btn-voltar">
-                Voltar 
+                Voltar
             </a>
             <a href="../home/index.html">
                 <img class="logo-image-nav" src="../../public/images/icon.png" alt="logo">
@@ -26,7 +26,7 @@
     <main>
         <div class="form-container">
             <h1 class="form-title">Cadastro de Anunciante</h1>
-            <form class="cadastro-form" action="processa_cadastro.php" method="POST">
+            <form class="cadastro-form">
                 <label for="marca" class="obrigatorio">Marca</label>
                 <input type="text" id="marca" name="marca" required>
 
@@ -87,6 +87,7 @@
                 <input type="file" id="fotos" name="fotos[]" accept="image/*" multiple required>
 
                 <button type="submit" class="form-button">Criar</button>
+                <div id="status-mensagem" style="margin-top: 1rem; text-align: center;"></div>
             </form>
         </div>
 
@@ -95,6 +96,55 @@
     <footer>
         <h3>Vitual Cars não é um site real</h3>
     </footer>
+
+    <script>
+        const form = document.querySelector('.cadastro-form');
+
+        form.addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const statusMsg = document.querySelector('#status-mensagem');
+            const botaoSubmit = document.querySelector('.form-button');
+
+            botaoSubmit.disabled = true;
+            botaoSubmit.textContent = 'Enviando...';
+            statusMsg.textContent = '';
+
+            const formData = new FormData(form);
+
+            try {
+
+                const response = await fetch('/virtual_cars/controller/cadastra-anuncio.php', {
+                    method: 'POST',
+                    body: formData 
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    statusMsg.textContent = result.message;
+                    statusMsg.style.color = 'green';
+                    form.reset(); 
+
+                    setTimeout(() => {
+                        window.location.href = '../anuncio/listagem/listagemAnuncios.html';
+                    }, 2000);
+
+                } else {
+                    statusMsg.textContent = result.message || 'Ocorreu um erro.';
+                    statusMsg.style.color = 'red';
+                }
+
+            } catch (error) {
+                console.error('Erro na requisição:', error);
+                statusMsg.textContent = 'Falha de comunicação com o servidor. Tente novamente.';
+                statusMsg.style.color = 'red';
+            } finally {
+                botaoSubmit.disabled = false;
+                botaoSubmit.textContent = 'Criar';
+            }
+        });
+    </script>
 </body>
 
 </html>

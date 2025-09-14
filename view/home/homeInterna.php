@@ -1,10 +1,23 @@
 <?php
+<<<<<<< HEAD:view/home/homeInterna.php
 session_start();
 if (!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']) {
     header('../view/user/login.html');
     exit();
 }
 ?>
+=======
+//TO DO:
+session_start();
+//TO DO: referencia correta?
+if (!isset($_SESSION['user_id'])) {
+    header('Location: ../user/login.html');
+    exit();
+}
+
+?>
+
+>>>>>>> main:view/home/homeInterna.html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -24,9 +37,13 @@ if (!isset($_SESSION['loggedIn']) || !$_SESSION['loggedIn']) {
                 <img class="logo-image-nav" src="../../public/images/icon.png" alt="logo">
             </a>
 
+<<<<<<< HEAD:view/home/homeInterna.php
             <button class="btn-login" onclick="logout()" id="btn-logout" type="button" name="action" value="logout" action="../../controller/anunciante-controller.php" method="POST">
+=======
+            <a href="../../controller/logout.php" class="btn-login">
+>>>>>>> main:view/home/homeInterna.html
                 Logout
-            </button>
+            </a>
         </nav>
     </header>
     <main>
